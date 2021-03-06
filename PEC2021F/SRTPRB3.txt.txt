@@ -1,0 +1,63 @@
+Sort Fractions
+You are given a list of fractions, where each fraction is represented as a tuple (of size 2) of integers.
+
+Find a sorted list of fractions that appear in the given array after removing fractions that are equivalent to each other.
+
+In case two fractions are equivalent, then the best representation of the fraction should appear in the final list.
+
+A positive fraction (p,q) is said to be better represented than an equivalent fraction (r,s) (Here pq=rs) if p<r. i.e. ((1, 2) is preferred over (2, 4))
+
+A negative fraction (p,q) is said to be better represented than an equivalent fraction (r,s) (Here pq=rs) if q>0 and s<0, i.e. it is preferred that negative fractions be represented as negative integers in the numerator than the denominator, for example ((-1, 2) is better than (1, -2))
+
+A negative fraction (p,q) is said to be better represented than an equivalent fraction (r,s) (Here pq=rs) if qs>0 and |p|<|r|, i.e. if the denominators have the same sign, then smaller absolute value of the numerator is preferred. For example (-1, 2) is better than (-2, 4) and (1, -2) is better than (2, -4).
+
+It is possible that the value of q is 0, in this case (p,0):
+
+is bigger than every other fraction if p>0 and smaller value of p is preferred, i.e. (1, 0) is preferred over (2, 0), and (1, 0), (2, 0) … are all equivalent to each other (think of them as +∞).
+
+is smaller than every other number if p<0 and larger value of p is preferred, i.e. (-1, 0) is preferred over (-2, 0), and (-1, 0), (-2, 0) … are all equivalent to each other (think of them as −∞).
+
+p is never 0, i.e. (0, 0) is not given as input in the array, so you do not have to deal with this case.
+
+A solution template is given and you have to complete the get_distinct_fractions method.
+
+Note that all fractions in your output must be there in the same form in the original array, i.e. if the array contains [(2, 4), (3, 6)] your final array must be [(2, 4)] and not [(1, 2)].
+
+You have to take the distinct fractions from the given array, removing duplicates and taking the best representation of the fractions among those given in the input.
+
+Input
+First line contains a single integer n, the number of fractions.
+
+The second line contains 2n space separated integers, the (2i)th and the (2i+1)th integer denote the numerator and denominator of the ith fraction respectively.
+
+Output
+Print two lines.
+
+In the first line print an integer m, the number of fractions in the final list.
+
+In the second line print 2m space separated integers, the (2i)th and the (2i+1)th integer denoting the numerator and denominator of the ith fraction respectively.
+
+Constraints
+1≤n≤105
+−109≤ every integer in the input ≤109
+Sample Input
+4
+-3 0 1 0 1 2 -2 0
+Sample Output
+3
+-2 0 1 2 1 0
+Explanation
+The given fractions are {−∞,∞,12.−∞}
+Therefore the sorted array is {−∞,12,∞}
+Note that (−2,0) is preferred over (−3,0)
+Sample Input 2
+4
+2 -4 3 -6 -4 8 -6 12
+Sample Output 2
+1
+-4 8
+Explanation 2
+The given fractions are all equivalent to −12
+It is preferred that negative number be in the numerator and not the denominator and among those with the same signs in the denominator the one with smallest absolute value in the numerator should be taken.
+
+So the final answer is {(−4,8)}

@@ -1,0 +1,42 @@
+Guess the Memory Limit
+Chef has designed a program but has forgotten the memory limits that he is allowed to consume on his system.
+
+There is a limit of L bytes of memory that Chef's program can consume on Chef's computer.
+
+If Chef's program attempts to use more than L bytes then it will result in segmentation fault.
+
+Fortunately he has designed his program in such a manner that given an integer M, the program will consume exactly M bytes of memory. (Chef can change this number M at will and run the program).
+
+Help Chef in finding the memory limit of the program.
+
+It is guaranteed that the memory limit is strictly less than 1 billion bytes or 1 giga byte and at least 1.
+
+You are given a function run_program(m) that will return true if the program ran properly while consuming exactly m bytes of memory, and false if it receives segmentation fault, i.e. the program used too much memory.
+
+Help Chef in writing a program that does not take more than 31 tries to figure out the memory limit.
+
+You are given a solution template.
+
+You can use the function run_program(x) to determine whether x bytes are allowed or not.
+
+Find the memory limit L. You cannot call run_program more than 31 times in your code, if you do so you will receive a "Wrong Answer" verdict.
+
+Instructions
+Follow the solution template. Copy paste the same code in your computer and complete the function find_memory_limit.
+
+Do not make any changes to the other part of the code given in the solution template.
+
+Local Testing
+Local Tester is a python program where you will find an empty function find_memory_limit, fill in your solution here and run this program as you would normally run a python program in your computer.
+
+The given tester generates random arrays, you can play around with them or give specific values to test your code locally.
+
+Constraints
+1≤L≤109−1
+Sample Solution
+Sample Solution
+
+Explanation
+In the sample solution, we run the program for all possible memory limits starting from 1. If the smallest number for which the program failed is x then x−1 must be the memory limit.
+
+However the program receives Wrong Answer because it calls runprogram too many times. For example if the memory limit L=33 bytes, then it will call the function 32 times, however you are allowed to run it only 31 times.

@@ -1,0 +1,52 @@
+Find the number of occurrences
+Chef's has a huge integer array A, and would like to find the number of occurrences of x for a given integer x.
+
+The array is so huge that it takes time to find out the value of the array at a given index i, fortunately Chef has stored the array in sorted order so that it helps in getting information efficiently later.
+
+You are not explicitly given the array, however you can use the function find_pos(x) to find the value of A[x].
+
+You are given an integer n (1≤n≤105), the size of the array (indexed from 0 to n−1) and an integer x.
+
+You are not given the array A, you can however figure out the value of A[x] by calling the function find_pos(x).
+
+Find the number of occurrences of x in the array A.
+
+Since find_pos is an expensive operation (since Chef's array is huge), you cannot use the find_pos function more than 40 times.
+
+You are given a solution template in which the input and output part is taken care of.
+
+Fill the count(n,x) function which takes as input the size of the integer array A and the value for which the number of occurrences is to be calculated and returns the number of occurrences of x in the array A.
+
+You can use the function find_pos(i) which returns the value of A[i].
+
+Use the fact that the hidden array A is in sorted order to solve the problem.
+
+Instructions
+Refer the following solution_template in order to solve the problem.
+
+Complete the function count(n,x) defined in the above solution template. The input and output required for this problem is taken care of in the solution template.
+
+You only need to fill the function given.
+
+Judging
+If your program attempts to read an index less than 0 or greater than n, then you will receive a Wrong Answer verdict.
+
+If your program calls find_pos() more than 40 times, then you will receive a Wrong Answer verdict.
+
+If your program correctly returns the number of occurrences of the given number x while calling the function find_pos() less than or equal to 40 times, then your program is considered correct.
+
+Local Testing
+Local Tester is a python program that you can use to test your solution. The given program generates random arrays and random values of x for the given array.
+
+You can add test cases or use other methods to generate test cases by modifying the code.
+
+Constraints
+1≤n≤105
+−109≤x≤109
+All elements of the array are between −109 and 109 (inclusive)
+
+Sample solution
+sample solution
+
+Explanation
+The sample code obtains all the elements of the array A, and directly prints the answer, however when the length of the array is greater than 40, the function find_pos() is called more than 40 times and hence this solution receives Wrong Answer verdict.
