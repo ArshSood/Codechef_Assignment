@@ -1,0 +1,47 @@
+Move the Robot
+A robot is initially at a position (xst,yst) in the 2D plane.
+
+You need to move it to the location (xen,yen)
+In one move you can make the robot travel one unit in the direction of
+
+North (Move from (x,y) to (x,y+1))
+
+South (Move from (x,y) to (x,y−1))
+
+East (Move from (x,y) to (x+1,y))
+
+West (Move from (x,y) to (x−1,y))
+
+Find a sequence of moves that results in the robot's location at (xen,yen), of length no more than 103.
+
+If there are many solutions, you can print any of them.
+
+It can be proven that for the given constraints, there always exists a solution.
+
+Input
+First line contains an integer T, the total number of testcases.
+
+Each testcase contains a single line with four space separated integers xst,yst,xen,yen respectively.
+
+Output
+For each testcase print two lines,
+
+In the first line print the number of moves you would like to make. (Say this number is m)
+
+In the second line print a string with m characters. The ith character should be either 'N', 'S', 'E' or 'W' depending on whether you want the robot to move one unit in the North, South, East and West directions respectively.
+
+Constraints
+1≤T≤100
+−250≤xst,yst,xen,yen≤250
+Sample Input
+1
+0 0 0 1
+Sample Output
+5
+ENWSN
+Explanation
+After four moves, the robot comes back to the same position and then moves North to the destination.
+
+Note that the single move 'N' is also a valid solution.
+
+As long as the final location of the robot is (xen,yen) and the number of moves is not greater than 1000, your answer will be considered correct.

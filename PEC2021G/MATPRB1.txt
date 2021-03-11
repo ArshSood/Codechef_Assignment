@@ -1,0 +1,42 @@
+Matrix Classification
+Given an n×n square matrix M, figure out if the matrix is
+
+symmetric matrix, i.e. the matrix is equal to it's transpose
+
+triangular matrix, i.e. either all elements in the lower triangle are 0 or all elements in the upper triangle are 0 (excluding the main diagonal)
+
+diagonal matrix, i.e. all non-zero elements lie on the main diagonal
+
+Let s=1 if the matrix is symmetric and 0 otherwise
+
+Let t=1 if the matrix is triangular and 0 otherwise
+
+Let d=1 if the matrix is diagonal and 0 otherwise
+
+Find s+2t+4d
+Input
+First line contains a single integer T, the number of testcases.
+
+First line of each testcase contains a single integer n the number of rows and columns of the matrix M.
+
+Next n lines, each contain n space separated integers, the elements of the matrix.
+
+The jth integer in the ith row is the value of the element Mij.
+
+Output
+For each testcase print a single integer, the value of s+2t+4d as defined in the problem statement
+
+Constraints
+1≤T≤105
+1≤∑over all testcasesn2≤105
+n,m≥1
+Sample Input
+1
+3
+1 0 0
+0 1 0
+0 0 1
+Sample Output
+7
+Explanation
+The given matrix is triangular, diagonal as well as symmetric. So s=t=d=1 and s+2t+4d=7
