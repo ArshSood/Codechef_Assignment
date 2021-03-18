@@ -1,0 +1,23 @@
+Find the middle element
+Given 5 integers, find their median, i.e. the third element when sorted.
+
+Input
+The first line contains an integer T, the number of testcases
+
+Each testcase contains a single line with five space separated integers
+
+Output
+Print one line for each testcase, the middle element
+Constraints
+1≤T≤1000
+Sample Input
+3
+5 4 3 2 1
+1 2 3 4 5
+1 1 1 1 1
+Sample Output
+3
+3
+1
+Explanation
+The sorted arrays are {1,2,3,4,5}, {1,2,3,4,5} and {1,1,1,1,1} Therefore the answers are 3,3,1

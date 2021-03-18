@@ -1,0 +1,58 @@
+Jump Stairs
+Chef is at the top of a flight of n stairs. Chef is initially at level n and wants to reach to level 0.
+
+In one move Chef can jump move at most 3 levels either up or down. (Note that Chef can choose to remain in the same position if he desires).
+
+Chef cannot move below level 0 or move above level n.
+
+Print the number of ways Chef can reach level 0 using after x moves.
+
+Note: If it is not possible to reach level 0, you should print 0, since there are no ways Chef can reach level 0.
+
+Input
+First line contains a single integer T, the number of test cases.
+
+First (and only) line of each test case contains two space separated integers, n and x respectively.
+
+Output
+Print a single line for each test case, the number of ways Chef can reach level 0 after exactly x steps.
+Constraints
+1≤T≤100
+0≤n≤15
+0≤x≤5
+Sample Input
+6
+0 5
+2 3
+15 5
+1 5
+10 5
+1 0
+Sample Output
+1
+9
+1
+16
+116
+0
+Explanation
+In the first test case n=0 (there are no stairs) so chef cannot move up or down. There is one way for him to reach level 0, i.e. do nothing.
+
+In the second test case there are in total 9 ways, they are (numbers denote levels and arrows denote moves x -> y denotes that chef moves from level x to level y in this move).
+
+2 -> 0 -> 0 -> 0
+2 -> 0 -> 1 -> 0
+2 -> 0 -> 2 -> 0
+2 -> 1 -> 0 -> 0
+2 -> 1 -> 1 -> 0
+2 -> 1 -> 2 -> 0
+2 -> 2 -> 0 -> 0
+2 -> 2 -> 1 -> 0
+2 -> 2 -> 2 -> 0
+That is in the first move Chef can choose to go to any of the three levels (0, 1, 2) and in the last move Chef can go to level 0.
+
+In the third test case, chef needs to move 15 steps down, but he can only move 3 steps down each time. So the only solution is to keep moving by 3 steps down each time to reach level 0 after exactly 5 steps.
+
+Fourth and fifth testcases are given only for verification and are not explained.
+
+For the sixth testcase Chef is at Level 1 and hence cannot possibly reach level 0 without making any moves, so the answer in this case is 0, (there are 0 ways to reach level 0 from level 1 without making any move).

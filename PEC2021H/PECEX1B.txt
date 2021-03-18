@@ -1,0 +1,43 @@
+Sum of Squares in two different ways
+Given an integer n, find out if it can be expressed as the sum of squares in two different ways.
+
+For example 50=1+49=25+25
+If your solution is n=a2+b2=c2+d2 where a≤b and c≤d and b<d then print a,b,c,d separated by a single space. If there are more than one solution, print the solution with minimum value of d.
+
+If there is no solution print -1 -1 -1 -1 instead.
+
+Note that a,b,c,d should be positive integers (i.e. 0 or negative integers are not allowed).
+
+Input
+First line contains a single integer T, the number of testcases.
+
+First line of each testcase contains a singe integer n, the number to be expressed as a sum of squares in two different ways.
+
+Output
+Print 4 space separated integers.
+
+If there is no solution then print -1 -1 -1 -1.
+
+Otherwise print four positive integers a,b,c,d such that :
+
+n=a2+b2=c2+d2
+a≤b, c≤d
+b<d
+among all such solutions d is minimum
+
+It can be shown that with the above constraints the answer to be printed is unique.
+
+Constraints
+1≤T≤103
+1≤n≤104
+Sample Input
+2
+50
+1
+Sample Output
+5 5 1 7
+-1 -1 -1 -1
+Explanation
+For the first testcase 50=52+52=12+72.
+
+For the second testcase clearly there are no solutions since the sum of two positive squares is at least 2.
